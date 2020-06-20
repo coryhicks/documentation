@@ -14,6 +14,7 @@ $networking basic tasks
 
 	$ net.ipv6.conf.eno0.disable_ipv6=1
 
+
 Firewall
 --------
 
