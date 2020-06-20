@@ -12,7 +12,7 @@ Look how easy it is to use:
     # Get your stuff done
     project.do_stuff()
 
-Basic Tasks:
+Basic Tasks
 --------
 
 -disable ipv6::
@@ -23,7 +23,7 @@ Basic Tasks:
 
 	$ net.ipv6.conf.eno0.disable_ipv6=1
 
-Firewall:
+Firewall
 ------------
 
 -firewall to allow dns qrys
