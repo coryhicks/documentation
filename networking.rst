@@ -3,8 +3,6 @@
 $networking
 ===========
 
-$networking
-
 Basic Tasks
 -----------
 
