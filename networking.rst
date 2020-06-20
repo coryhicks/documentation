@@ -1,10 +1,10 @@
 #documentation
 
-$networking
-========
+networking
+==========
 
-$networking basic tasks
------------------------
+basic tasks
+-----------
 
 - disable ipv6::
 
