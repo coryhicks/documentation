@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>$project &#8212; Read the Docs Template 1.0 documentation</title>
+    <title>$networking &#8212; Read the Docs Template 1.0 documentation</title>
     <link rel="stylesheet" href="_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     
@@ -17,8 +17,7 @@
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="&lt;no title&gt;" href="authors.html" />
-    <link rel="prev" title="Welcome to Cory’s Linux Best Practices and documentation!" href="index.html" /> 
+    <link rel="prev" title="&lt;no title&gt;" href="history.html" /> 
   </head><body>
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
@@ -27,13 +26,10 @@
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="authors.html" title="&lt;no title&gt;"
-             accesskey="N">next</a> |</li>
-        <li class="right" >
-          <a href="index.html" title="Welcome to Cory’s Linux Best Practices and documentation!"
+          <a href="history.html" title="&lt;no title&gt;"
              accesskey="P">previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="index.html">Read the Docs Template 1.0 documentation</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">$project</a></li> 
+        <li class="nav-item nav-item-this"><a href="">$networking</a></li> 
       </ul>
     </div>  
 
@@ -43,9 +39,9 @@
           <div class="body" role="main">
             
   <p># documentation</p>
-<div class="section" id="project">
-<h1>$project<a class="headerlink" href="#project" title="Permalink to this headline">¶</a></h1>
-<p>$project will solve your problem of where to start with documentation,
+<div class="section" id="networking">
+<h1>$networking<a class="headerlink" href="#networking" title="Permalink to this headline">¶</a></h1>
+<p>$networking will solve your problem of where to start with documentation,
 by providing a basic explanation of how to do it easily.</p>
 <p>Look how easy it is to use:</p>
 <blockquote>
@@ -53,18 +49,22 @@ by providing a basic explanation of how to do it easily.</p>
 # Get your stuff done
 project.do_stuff()</p>
 </div></blockquote>
-<div class="section" id="features">
-<h2>Features<a class="headerlink" href="#features" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><p>Be awesome</p></li>
-<li><p>Make things faster</p></li>
-</ul>
+<div class="section" id="basic-tasks">
+<h2>Basic Tasks:<a class="headerlink" href="#basic-tasks" title="Permalink to this headline">¶</a></h2>
+<p>-disable ipv6:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ sudo sysctl -w net.ipv6.conf.eth0.disable_ipv6=1
+</pre></div>
 </div>
-<div class="section" id="installation">
-<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
-<p>Install $project by running:</p>
+<p>-add to /etc/sysctl.conf</p>
 <blockquote>
-<div><p>install project</p>
+<div><p>$ net.ipv6.conf.eno0.disable_ipv6=1</p>
+</div></blockquote>
+</div>
+<div class="section" id="firewall">
+<h2>Firewall:<a class="headerlink" href="#firewall" title="Permalink to this headline">¶</a></h2>
+<p>-firewall to allow dns qrys</p>
+<blockquote>
+<div><p>$ sudo firewall-cmd –zone= –add-service=dns</p>
 </div></blockquote>
 </div>
 <div class="section" id="contribute">
@@ -94,9 +94,9 @@ We have a mailing list located at: <a class="reference external" href="mailto:pr
         <div class="sphinxsidebarwrapper">
   <h3><a href="index.html">Table of Contents</a></h3>
   <ul>
-<li><a class="reference internal" href="#">$project</a><ul>
-<li><a class="reference internal" href="#features">Features</a></li>
-<li><a class="reference internal" href="#installation">Installation</a></li>
+<li><a class="reference internal" href="#">$networking</a><ul>
+<li><a class="reference internal" href="#basic-tasks">Basic Tasks:</a></li>
+<li><a class="reference internal" href="#firewall">Firewall:</a></li>
 <li><a class="reference internal" href="#contribute">Contribute</a></li>
 <li><a class="reference internal" href="#support">Support</a></li>
 <li><a class="reference internal" href="#license">License</a></li>
@@ -105,15 +105,12 @@ We have a mailing list located at: <a class="reference external" href="mailto:pr
 </ul>
 
   <h4>Previous topic</h4>
-  <p class="topless"><a href="index.html"
-                        title="previous chapter">Welcome to Cory’s Linux Best Practices and documentation!</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="authors.html"
-                        title="next chapter">&lt;no title&gt;</a></p>
+  <p class="topless"><a href="history.html"
+                        title="previous chapter">&lt;no title&gt;</a></p>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
-      <li><a href="_sources/README.rst.txt"
+      <li><a href="_sources/networking.rst.txt"
             rel="nofollow">Show Source</a></li>
     </ul>
    </div>
@@ -138,13 +135,10 @@ We have a mailing list located at: <a class="reference external" href="mailto:pr
           <a href="genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="authors.html" title="&lt;no title&gt;"
-             >next</a> |</li>
-        <li class="right" >
-          <a href="index.html" title="Welcome to Cory’s Linux Best Practices and documentation!"
+          <a href="history.html" title="&lt;no title&gt;"
              >previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="index.html">Read the Docs Template 1.0 documentation</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">$project</a></li> 
+        <li class="nav-item nav-item-this"><a href="">$networking</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">

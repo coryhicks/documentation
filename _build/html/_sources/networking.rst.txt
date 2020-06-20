@@ -1,9 +1,9 @@
 # documentation
 
-$project
+$networking
 ========
 
-$project will solve your problem of where to start with documentation,
+$networking will solve your problem of where to start with documentation,
 by providing a basic explanation of how to do it easily.
 
 Look how easy it is to use:
@@ -12,18 +12,23 @@ Look how easy it is to use:
     # Get your stuff done
     project.do_stuff()
 
-Features
+Basic Tasks:
 --------
 
-- Be awesome
-- Make things faster
+-disable ipv6::
 
-Installation
+	$ sudo sysctl -w net.ipv6.conf.eth0.disable_ipv6=1
+
+-add to /etc/sysctl.conf
+
+	$ net.ipv6.conf.eno0.disable_ipv6=1
+
+Firewall:
 ------------
 
-Install $project by running:
+-firewall to allow dns qrys
 
-    install project
+    $ sudo firewall-cmd --zone= --add-service=dns
 
 Contribute
 ----------
