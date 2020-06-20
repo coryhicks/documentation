@@ -51,37 +51,27 @@ project.do_stuff()</p>
 </div></blockquote>
 <div class="section" id="basic-tasks">
 <h2>Basic Tasks<a class="headerlink" href="#basic-tasks" title="Permalink to this headline">¶</a></h2>
-<p>-disable ipv6:</p>
+<ul>
+<li><p>disable ipv6:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ sudo sysctl -w net.ipv6.conf.eth0.disable_ipv6=1
 </pre></div>
 </div>
-<p>-add to /etc/sysctl.conf</p>
-<blockquote>
-<div><p>$ net.ipv6.conf.eno0.disable_ipv6=1</p>
-</div></blockquote>
+</li>
+</ul>
+<p>-add to /etc/sysctl.conf:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ net.ipv6.conf.eno0.disable_ipv6=1
+</pre></div>
+</div>
 </div>
 <div class="section" id="firewall">
 <h2>Firewall<a class="headerlink" href="#firewall" title="Permalink to this headline">¶</a></h2>
-<p>-firewall to allow dns qrys</p>
+<ul>
+<li><p>firewall to allow dns qrys</p>
 <blockquote>
 <div><p>$ sudo firewall-cmd –zone= –add-service=dns</p>
 </div></blockquote>
-</div>
-<div class="section" id="contribute">
-<h2>Contribute<a class="headerlink" href="#contribute" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><p>Issue Tracker: github.com/$project/$project/issues</p></li>
-<li><p>Source Code: github.com/$project/$project</p></li>
+</li>
 </ul>
-</div>
-<div class="section" id="support">
-<h2>Support<a class="headerlink" href="#support" title="Permalink to this headline">¶</a></h2>
-<p>If you are having issues, please let us know.
-We have a mailing list located at: <a class="reference external" href="mailto:project&#37;&#52;&#48;google-groups&#46;com">project<span>&#64;</span>google-groups<span>&#46;</span>com</a></p>
-</div>
-<div class="section" id="license">
-<h2>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
-<p>The project is licensed under the BSD license.</p>
 </div>
 </div>
 
@@ -97,9 +87,6 @@ We have a mailing list located at: <a class="reference external" href="mailto:pr
 <li><a class="reference internal" href="#">$networking</a><ul>
 <li><a class="reference internal" href="#basic-tasks">Basic Tasks</a></li>
 <li><a class="reference internal" href="#firewall">Firewall</a></li>
-<li><a class="reference internal" href="#contribute">Contribute</a></li>
-<li><a class="reference internal" href="#support">Support</a></li>
-<li><a class="reference internal" href="#license">License</a></li>
 </ul>
 </li>
 </ul>
