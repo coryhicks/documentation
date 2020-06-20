@@ -1,8 +1,10 @@
+#documentation
+
 $networking
 ========
 
-basic tasks
---------
+$networking basic tasks
+-----------------------
 
 - disable ipv6::
 
@@ -13,7 +15,7 @@ basic tasks
 	$ net.ipv6.conf.eno0.disable_ipv6=1
 
 Firewall
-------------
+--------
 
 - firewall to allow dns qrys
 
