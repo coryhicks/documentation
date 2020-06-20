@@ -8,4 +8,4 @@ disable ipv6::
 
 add to /etc/sysctl.conf
 
-	net.ipv6.conf.eno0.disable_ipv6=1
+	$ net.ipv6.conf.eno0.disable_ipv6=1
