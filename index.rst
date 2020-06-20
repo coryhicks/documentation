@@ -9,7 +9,7 @@ Welcome to Cory's Linux Best Practices and documentation!
 Contents:
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 6
    :glob:
 
    *
