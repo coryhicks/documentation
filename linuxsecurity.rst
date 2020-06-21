@@ -18,12 +18,14 @@ NMAP
 
 	$ nmap -sU -sS --script=smb-enum-users -p U:137,T:139 192.168.0.200-254
 
+
 NBTSCAN
 -------
 
 - Find Windows / Samba servers on subnet, returns mac address, netbios name, client workgroup domain
 
 	$ nbtscan 192.168.0.0/24
+
 
 NIKITO
 ------
@@ -34,6 +36,7 @@ NIKITO
 
 	$ nikto -h 192.168.0.100
 
+
 NETSTAT
 -------
 
@@ -41,8 +44,10 @@ NETSTAT
 
 	$ sudo netstat -tulpn | grep LISTEN
 
+
 SSH Attempted Logins
 --------------------
+
 - https://www.suse.com/c/checking-log-file-invalid-ssh-connection-attempts/
 
 	$ grep "Invalid user" /var/log/messages
