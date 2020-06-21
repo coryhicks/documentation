@@ -1,0 +1,145 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>$sys_admin &#8212; Read the Docs Template 1.0 documentation</title>
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="$networking" href="networking.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="networking.html" title="$networking"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Read the Docs Template 1.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">$sys_admin</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <p id="sysadmin"># documentation</p>
+<div class="section" id="sys-admin">
+<h1>$sys_admin<a class="headerlink" href="#sys-admin" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="webmin-specific">
+<h2>Webmin Specific<a class="headerlink" href="#webmin-specific" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p>Create a webmin user password like so:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ /usr/libexec/webmin/changepass.pl /etc/webmin root YOURPASSWORD.
+</pre></div>
+</div>
+</li>
+<li><p>Ubuntu specific:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ /usr/share/webmin/changepass.pl /etc/webmin root YOUR_PASSWORD
+</pre></div>
+</div>
+</li>
+<li><p>Download with wget:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ wget http://prdownloads.sourceforge.net/webadmin/webmin-1.900-1.noarch.rpm
+</pre></div>
+</div>
+</li>
+<li><p>Install needed dependencies:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ yum -y install perl perl-Net-SSLeay openssl perl-IO-Tty perl-Encode-Detect
+</pre></div>
+</div>
+</li>
+<li><p>Install w/ RPM:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ rpm -U webmin-1.900-1.noarch.rpm
+</pre></div>
+</div>
+</li>
+<li><p>If you are running a firewall and you should be, you will need to open up port 10000:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ sudo firewall-cmd --add-port=10000/tcp --permanent
+
+$ sudo firewall-cmd --reload
+</pre></div>
+</div>
+</li>
+<li><p>Access the site here:</p>
+<blockquote>
+<div><p><a class="reference external" href="https://localhost:10000">https://localhost:10000</a></p>
+</div></blockquote>
+</li>
+</ul>
+</div>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">$sys_admin</a><ul>
+<li><a class="reference internal" href="#webmin-specific">Webmin Specific</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="networking.html"
+                        title="previous chapter">$networking</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/sysadmin.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="networking.html" title="$networking"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Read the Docs Template 1.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">$sys_admin</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2014, Read the Docs.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.1.1.
+    </div>
+  </body>
+</html>

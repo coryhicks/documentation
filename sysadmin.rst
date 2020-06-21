@@ -1,4 +1,4 @@
-..  _sys_admin:
+..  _sysadmin:
 
 # documentation
 
