@@ -5,9 +5,15 @@
 $sys_admin
 ===========
 
-- Helpful commands
+Helpful commands
+----------------
+
+du is useful for getting file and directory sizes::
 
 	$ du -ah --max-depth=1 /var/log
+
+
+Need to copy or sync up directories that are on different hosts/servers? rsync is your friend::
 
 	$ rsync -avr -X --exclude='._NETWARE/' /media/nss/DATA2/ root@172.16.0.213:/media/nss/DATA3/
 

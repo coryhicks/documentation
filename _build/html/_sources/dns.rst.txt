@@ -6,6 +6,6 @@ $dns
 Logging
 -------
 
-- logging DNS queries
+- logging DNS queries::
 
 	$ rndc querylog

@@ -41,14 +41,17 @@
   <p id="sysadmin"># documentation</p>
 <div class="section" id="sys-admin">
 <h1>$sys_admin<a class="headerlink" href="#sys-admin" title="Permalink to this headline">¶</a></h1>
-<ul>
-<li><p>Helpful commands</p>
-<blockquote>
-<div><p>$ du -ah –max-depth=1 /var/log</p>
-<p>$ rsync -avr -X –exclude=’._NETWARE/’ /media/nss/DATA2/ <a class="reference external" href="mailto:root&#37;&#52;&#48;172&#46;16&#46;0&#46;213">root<span>&#64;</span>172<span>&#46;</span>16<span>&#46;</span>0<span>&#46;</span>213</a>:/media/nss/DATA3/</p>
-</div></blockquote>
-</li>
-</ul>
+<div class="section" id="helpful-commands">
+<h2>Helpful commands<a class="headerlink" href="#helpful-commands" title="Permalink to this headline">¶</a></h2>
+<p>du is useful for getting file and directory sizes:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ du -ah --max-depth=1 /var/log
+</pre></div>
+</div>
+<p>Need to copy or sync up directories that are on different hosts/servers? rsync is your friend:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ rsync -avr -X --exclude=&#39;._NETWARE/&#39; /media/nss/DATA2/ root@172.16.0.213:/media/nss/DATA3/
+</pre></div>
+</div>
+</div>
 <div class="section" id="webmin-specific">
 <h2>Webmin Specific<a class="headerlink" href="#webmin-specific" title="Permalink to this headline">¶</a></h2>
 <ul>
@@ -103,6 +106,7 @@ $ sudo firewall-cmd --reload
   <h3><a href="index.html">Table of Contents</a></h3>
   <ul>
 <li><a class="reference internal" href="#">$sys_admin</a><ul>
+<li><a class="reference internal" href="#helpful-commands">Helpful commands</a></li>
 <li><a class="reference internal" href="#webmin-specific">Webmin Specific</a></li>
 </ul>
 </li>
