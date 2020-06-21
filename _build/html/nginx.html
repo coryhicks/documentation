@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>&lt;no title&gt; &#8212; Read the Docs Template 1.0 documentation</title>
+    <title>$nginx &#8212; Read the Docs Template 1.0 documentation</title>
     <link rel="stylesheet" href="_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     
@@ -17,8 +17,8 @@
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="$networking" href="networking.html" />
-    <link rel="prev" title="$dns" href="dns.html" /> 
+    <link rel="next" title="$sys_admin" href="sysadmin.html" />
+    <link rel="prev" title="$networking" href="networking.html" /> 
   </head><body>
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
@@ -27,13 +27,13 @@
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="networking.html" title="$networking"
+          <a href="sysadmin.html" title="$sys_admin"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="dns.html" title="$dns"
+          <a href="networking.html" title="$networking"
              accesskey="P">previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="index.html">Read the Docs Template 1.0 documentation</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">&lt;no title&gt;</a></li> 
+        <li class="nav-item nav-item-this"><a href="">$nginx</a></li> 
       </ul>
     </div>  
 
@@ -42,7 +42,36 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  
+  <p id="nginx"># documentation</p>
+<div class="section" id="id1">
+<h1>$nginx<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="basic-setup">
+<h2>Basic Setup<a class="headerlink" href="#basic-setup" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p>CentOS specific:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ load epel
+
+$ sudo yum install epel-release
+
+$ load nginx
+
+$sudo yum install nginx
+
+$ sudo systemctl enable nginx
+</pre></div>
+</div>
+</li>
+<li><p>Open up port in firewall:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ firewall-cmd --permanent --zone=public --add-service=http
+
+$ firewall-cmd --reload
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+
 
             <div class="clearer"></div>
           </div>
@@ -50,16 +79,24 @@
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">$nginx</a><ul>
+<li><a class="reference internal" href="#basic-setup">Basic Setup</a></li>
+</ul>
+</li>
+</ul>
+
   <h4>Previous topic</h4>
-  <p class="topless"><a href="dns.html"
-                        title="previous chapter">$dns</a></p>
-  <h4>Next topic</h4>
   <p class="topless"><a href="networking.html"
-                        title="next chapter">$networking</a></p>
+                        title="previous chapter">$networking</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="sysadmin.html"
+                        title="next chapter">$sys_admin</a></p>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
-      <li><a href="_sources/history.rst.txt"
+      <li><a href="_sources/nginx.rst.txt"
             rel="nofollow">Show Source</a></li>
     </ul>
    </div>
@@ -84,13 +121,13 @@
           <a href="genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="networking.html" title="$networking"
+          <a href="sysadmin.html" title="$sys_admin"
              >next</a> |</li>
         <li class="right" >
-          <a href="dns.html" title="$dns"
+          <a href="networking.html" title="$networking"
              >previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="index.html">Read the Docs Template 1.0 documentation</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">&lt;no title&gt;</a></li> 
+        <li class="nav-item nav-item-this"><a href="">$nginx</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">

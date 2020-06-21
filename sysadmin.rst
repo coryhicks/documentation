@@ -5,6 +5,13 @@
 $sys_admin
 ===========
 
+- Helpful commands
+
+	$ du -ah --max-depth=1 /var/log
+
+	$ rsync -avr -X --exclude='._NETWARE/' /media/nss/DATA2/ root@172.16.0.213:/media/nss/DATA3/
+
+
 Webmin Specific
 ---------------
 
