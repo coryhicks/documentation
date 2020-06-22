@@ -90,9 +90,9 @@ Ufw uses profiles for popular applications, save yourself some time and see if w
 
 For more info on ufw, check out the docs at Ubuntu - https://ubuntu.com/server/docs/security-firewall
 
-Warning:
+.. warning::
 
-	May need: setenforce Permissive
+	May need: setenforce Permissive, please research to see the negative security implications for this
 
 
 Contribute
