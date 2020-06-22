@@ -51,6 +51,7 @@ General Firewall
 ----------------
 
 Fedora (firewalld):
+------------------
 
 firewall to allow dns qrys::
 
@@ -63,6 +64,7 @@ Open up port in firewall::
 	$ firewall-cmd --reload
 
 Ubuntu (ufw):
+------------
 
 You need to enable the ufw service::
 	
