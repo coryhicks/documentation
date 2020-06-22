@@ -47,8 +47,10 @@ DHCP
 	$ egrep "lease|hostname|hardware|\}" /var/lib/dhcpd/dhcpd.leases
 	
 
-Fedora (firewalld)
-------------------
+Fedora
+------
+
+Fedora and CentOS use firewalld.
 
 firewall to allow dns qrys::
 
@@ -60,8 +62,10 @@ Open up port in firewall::
 
 	$ firewall-cmd --reload
 
-Ubuntu (ufw)
-------------
+Ubuntu
+------
+
+User Friendly Firewall (UFW).
 
 You need to enable the ufw service::
 	

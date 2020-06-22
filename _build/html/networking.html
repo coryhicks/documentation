@@ -92,8 +92,9 @@ $ systemctl status/start/stop/restart dhcpd
 </li>
 </ul>
 </div>
-<div class="section" id="fedora-firewalld">
-<h2>Fedora (firewalld)<a class="headerlink" href="#fedora-firewalld" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="fedora">
+<h2>Fedora<a class="headerlink" href="#fedora" title="Permalink to this headline">¶</a></h2>
+<p>Fedora and CentOS use firewalld.</p>
 <p>firewall to allow dns qrys:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ sudo firewall-cmd --zone= --add-service=dns
 </pre></div>
@@ -105,8 +106,9 @@ $ firewall-cmd --reload
 </pre></div>
 </div>
 </div>
-<div class="section" id="ubuntu-ufw">
-<h2>Ubuntu (ufw)<a class="headerlink" href="#ubuntu-ufw" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="ubuntu">
+<h2>Ubuntu<a class="headerlink" href="#ubuntu" title="Permalink to this headline">¶</a></h2>
+<p>User Friendly Firewall (UFW).</p>
 <p>You need to enable the ufw service:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ sudo ufw enable
 </pre></div>
@@ -163,8 +165,8 @@ We have a mailing list located at: <a class="reference external" href="mailto:pr
 <li><a class="reference internal" href="#">$networking</a><ul>
 <li><a class="reference internal" href="#basic-tasks">Basic Tasks</a></li>
 <li><a class="reference internal" href="#dhcp">DHCP</a></li>
-<li><a class="reference internal" href="#fedora-firewalld">Fedora (firewalld)</a></li>
-<li><a class="reference internal" href="#ubuntu-ufw">Ubuntu (ufw)</a></li>
+<li><a class="reference internal" href="#fedora">Fedora</a></li>
+<li><a class="reference internal" href="#ubuntu">Ubuntu</a></li>
 <li><a class="reference internal" href="#contribute">Contribute</a></li>
 <li><a class="reference internal" href="#support">Support</a></li>
 <li><a class="reference internal" href="#license">License</a></li>
