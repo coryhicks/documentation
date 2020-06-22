@@ -44,7 +44,7 @@ DHCP
 
 - View open leases::
 
-	egrep "lease|hostname|hardware|\}" /var/lib/dhcpd/dhcpd.leases
+	$ egrep "lease|hostname|hardware|\}" /var/lib/dhcpd/dhcpd.leases
 	
 
 Fedora (firewalld)
