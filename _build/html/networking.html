@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>$networking &#8212; Read the Docs Template 1.0 documentation</title>
+    <title>$networking &#8212; Cory Hicks | Cory’s Linux Best Practices and Documentation 1.0 documentation</title>
     <link rel="stylesheet" href="_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     
@@ -32,7 +32,7 @@
         <li class="right" >
           <a href="linuxsecurity.html" title="$LinuxSecurity"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">Read the Docs Template 1.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Cory Hicks | Cory’s Linux Best Practices and Documentation 1.0 documentation</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">$networking</a></li> 
       </ul>
     </div>  
@@ -94,6 +94,9 @@ $ systemctl status/start/stop/restart dhcpd
 </div>
 <div class="section" id="general-firewall">
 <h2>General Firewall<a class="headerlink" href="#general-firewall" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="fedora-firewalld">
+<h2>Fedora (firewalld):<a class="headerlink" href="#fedora-firewalld" title="Permalink to this headline">¶</a></h2>
 <p>firewall to allow dns qrys:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ sudo firewall-cmd --zone= --add-service=dns
 </pre></div>
@@ -104,6 +107,30 @@ $ systemctl status/start/stop/restart dhcpd
 $ firewall-cmd --reload
 </pre></div>
 </div>
+</div>
+<div class="section" id="ubuntu-ufw">
+<h2>Ubuntu (ufw):<a class="headerlink" href="#ubuntu-ufw" title="Permalink to this headline">¶</a></h2>
+<p>You need to enable the ufw service:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ sudo ufw enable
+</pre></div>
+</div>
+<p>Allow web traffic on port 80 for http:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$  sudo ufw --dry-run allow http
+</pre></div>
+</div>
+<p>Allow traffic from a specific IP, this example allows ssh from a specific host:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ sudo ufw allow proto tcp from 172.16.0.2 to any port 22
+</pre></div>
+</div>
+<p>Get status on the firewall:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ sudo ufw status verbose
+</pre></div>
+</div>
+<p>Ufw uses profiles for popular applications, save yourself some time and see if what you need all ready has a profile:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ sudo ufw app list
+</pre></div>
+</div>
+<p>For more info on ufw, check out the docs at Ubuntu - <a class="reference external" href="https://ubuntu.com/server/docs/security-firewall">https://ubuntu.com/server/docs/security-firewall</a></p>
 <p>Warning:</p>
 <blockquote>
 <div><p>May need: setenforce Permissive</p>
@@ -140,6 +167,8 @@ We have a mailing list located at: <a class="reference external" href="mailto:pr
 <li><a class="reference internal" href="#basic-tasks">Basic Tasks</a></li>
 <li><a class="reference internal" href="#dhcp">DHCP</a></li>
 <li><a class="reference internal" href="#general-firewall">General Firewall</a></li>
+<li><a class="reference internal" href="#fedora-firewalld">Fedora (firewalld):</a></li>
+<li><a class="reference internal" href="#ubuntu-ufw">Ubuntu (ufw):</a></li>
 <li><a class="reference internal" href="#contribute">Contribute</a></li>
 <li><a class="reference internal" href="#support">Support</a></li>
 <li><a class="reference internal" href="#license">License</a></li>
@@ -186,12 +215,12 @@ We have a mailing list located at: <a class="reference external" href="mailto:pr
         <li class="right" >
           <a href="linuxsecurity.html" title="$LinuxSecurity"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">Read the Docs Template 1.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Cory Hicks | Cory’s Linux Best Practices and Documentation 1.0 documentation</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">$networking</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2014, Read the Docs.
+        &#169; Copyright 2020, Cory Hicks.
       Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.1.1.
     </div>
   </body>

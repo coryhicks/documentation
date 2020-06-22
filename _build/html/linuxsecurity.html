@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>$LinuxSecurity &#8212; Read the Docs Template 1.0 documentation</title>
+    <title>$LinuxSecurity &#8212; Cory Hicks | Cory’s Linux Best Practices and Documentation 1.0 documentation</title>
     <link rel="stylesheet" href="_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     
@@ -32,7 +32,7 @@
         <li class="right" >
           <a href="history.html" title="&lt;no title&gt;"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">Read the Docs Template 1.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Cory Hicks | Cory’s Linux Best Practices and Documentation 1.0 documentation</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">$LinuxSecurity</a></li> 
       </ul>
     </div>  
@@ -49,25 +49,25 @@
 <h2>NMAP<a class="headerlink" href="#nmap" title="Permalink to this headline">¶</a></h2>
 <ul>
 <li><p><a class="reference external" href="https://highon.coffee/blog/nmap-cheat-sheet/">https://highon.coffee/blog/nmap-cheat-sheet/</a></p></li>
-<li><p>Find open/exposed Netbios Servers</p>
-<blockquote>
-<div><p>$ nmap -sV -v -p 139,445 192.168.0.0/24</p>
-</div></blockquote>
+<li><p>Find open/exposed Netbios Servers:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ nmap -sV -v -p 139,445 192.168.0.0/24
+</pre></div>
+</div>
 </li>
-<li><p>Enumerate SMB Users</p>
-<blockquote>
-<div><p>$ nmap -sU -sS –script=smb-enum-users -p U:137,T:139 192.168.0.200-254</p>
-</div></blockquote>
+<li><p>Enumerate SMB Users:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ nmap -sU -sS --script=smb-enum-users -p U:137,T:139 192.168.0.200-254
+</pre></div>
+</div>
 </li>
 </ul>
 </div>
 <div class="section" id="nbtscan">
 <h2>NBTSCAN<a class="headerlink" href="#nbtscan" title="Permalink to this headline">¶</a></h2>
 <ul>
-<li><p>Find Windows / Samba servers on subnet, returns mac address, netbios name, client workgroup domain</p>
-<blockquote>
-<div><p>$ nbtscan 192.168.0.0/24</p>
-</div></blockquote>
+<li><p>Find Windows / Samba servers on subnet, returns mac address, netbios name, client workgroup domain:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ nbtscan 192.168.0.0/24
+</pre></div>
+</div>
 </li>
 </ul>
 </div>
@@ -75,33 +75,34 @@
 <h2>NIKITO<a class="headerlink" href="#nikito" title="Permalink to this headline">¶</a></h2>
 <ul>
 <li><p><a class="reference external" href="https://cirt.net/Nikto2">https://cirt.net/Nikto2</a></p></li>
-<li><p>For http/https web server enumeration</p>
-<blockquote>
-<div><p>$ nikto -h 192.168.0.100</p>
-</div></blockquote>
+<li><p>For http/https web server enumeration:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ nikto -h 192.168.0.100
+</pre></div>
+</div>
 </li>
 </ul>
 </div>
 <div class="section" id="netstat">
 <h2>NETSTAT<a class="headerlink" href="#netstat" title="Permalink to this headline">¶</a></h2>
 <ul>
-<li><p>See Open Ports</p>
-<blockquote>
-<div><p>$ sudo netstat -tulpn | grep LISTEN</p>
-</div></blockquote>
+<li><p>See Open Ports:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ sudo netstat -tulpn | grep LISTEN
+</pre></div>
+</div>
 </li>
 </ul>
 </div>
 <div class="section" id="ssh-attempted-logins">
 <h2>SSH Attempted Logins<a class="headerlink" href="#ssh-attempted-logins" title="Permalink to this headline">¶</a></h2>
-<ul>
-<li><p><a class="reference external" href="https://www.suse.com/c/checking-log-file-invalid-ssh-connection-attempts/">https://www.suse.com/c/checking-log-file-invalid-ssh-connection-attempts/</a></p>
-<blockquote>
-<div><p>$ grep “Invalid user” /var/log/messages</p>
-<p>$ grep “Invalid user” /var/log/messages|awk ‘{print $NF}’ | sort|uniq -c|sort -nr|head -n 25</p>
-</div></blockquote>
-</li>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.suse.com/c/checking-log-file-invalid-ssh-connection-attempts/">https://www.suse.com/c/checking-log-file-invalid-ssh-connection-attempts/</a></p></li>
 </ul>
+<p>Look at these logs:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ grep &quot;Invalid user&quot; /var/log/messages
+
+$ grep &quot;Invalid user&quot; /var/log/messages|awk &#39;{print $NF}&#39; | \ sort|uniq -c|sort -nr|head -n 25
+</pre></div>
+</div>
 </div>
 </div>
 
@@ -163,12 +164,12 @@
         <li class="right" >
           <a href="history.html" title="&lt;no title&gt;"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">Read the Docs Template 1.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Cory Hicks | Cory’s Linux Best Practices and Documentation 1.0 documentation</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">$LinuxSecurity</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2014, Read the Docs.
+        &#169; Copyright 2020, Cory Hicks.
       Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.1.1.
     </div>
   </body>
