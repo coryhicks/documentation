@@ -50,6 +50,8 @@ DHCP
 General Firewall 
 ----------------
 
+Fedora (firewalld):
+
 firewall to allow dns qrys::
 
     $ sudo firewall-cmd --zone= --add-service=dns
@@ -60,6 +62,30 @@ Open up port in firewall::
 
 	$ firewall-cmd --reload
 
+Ubuntu (ufw):
+
+You need to enable the ufw service::
+	
+	$ sudo ufw enable
+
+Allow web traffic on port 80 for http::
+
+	$  sudo ufw --dry-run allow http
+
+Allow traffic from a specific IP, this example allows ssh from a specific host::
+
+
+	$ sudo ufw allow proto tcp from 172.16.0.2 to any port 22
+
+Get status on the firewall::
+
+	$ sudo ufw status verbose
+
+Ufw uses profiles for popular applications, save yourself some time and see if what you need all ready has a profile::
+
+	$ sudo ufw app list
+
+For more info on ufw, check out the docs at Ubuntu - https://ubuntu.com/server/docs/security-firewall
 
 Warning:
 
