@@ -47,8 +47,44 @@
 <h1>$networking<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="basic-tasks">
 <h2>Basic Tasks<a class="headerlink" href="#basic-tasks" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="static-ip">
+<h2>Static IP<a class="headerlink" href="#static-ip" title="Permalink to this headline">¶</a></h2>
+<p>Ubuntu:</p>
 <ul>
-<li><p>set-up static ip</p></li>
+<li><p>Ubuntu uses netplan after version 18 and up, it’s pretty easy to use</p></li>
+<li><p>You will need the name of your network interface:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ip a
+</pre></div>
+</div>
+</li>
+<li><p>use vi or other text editor to edit the .yaml file here: /etc/netplan</p></li>
+<li><p>here is a sample static ipv 4 example:</p></li>
+</ul>
+<dl>
+<dt>network:</dt><dd><p>version: 2
+renderer: networkd
+ethernets:</p>
+<blockquote>
+<div><dl>
+<dt>ens33:</dt><dd><p>dhcp4: no
+addresses:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>172.16.0.100/24</p></li>
+</ul>
+</div></blockquote>
+<p>gateway4: 172.16.0.1
+nameservers:</p>
+<blockquote>
+<div><p>addresses: [8.8.8.8, 1.1.1.1]</p>
+</div></blockquote>
+</dd>
+</dl>
+</div></blockquote>
+</dd>
+</dl>
+<ul>
 <li><p>make sure you have all the tools you need, ifconfig, etc</p></li>
 <li><p>disable ipv6:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ sudo sysctl -w net.ipv6.conf.eth0.disable_ipv6=1
@@ -164,6 +200,7 @@ We have a mailing list located at: <a class="reference external" href="mailto:pr
   <ul>
 <li><a class="reference internal" href="#">$networking</a><ul>
 <li><a class="reference internal" href="#basic-tasks">Basic Tasks</a></li>
+<li><a class="reference internal" href="#static-ip">Static IP</a></li>
 <li><a class="reference internal" href="#dhcp">DHCP</a></li>
 <li><a class="reference internal" href="#fedora">Fedora</a></li>
 <li><a class="reference internal" href="#ubuntu">Ubuntu</a></li>
