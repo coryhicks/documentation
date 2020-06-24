@@ -12,6 +12,10 @@ du is useful for getting file and directory sizes::
 
 	$ du -ah --max-depth=1 /var/log
 
+sometimes you need the real/actual size of the dir (important for pools or where file compression is in play)
+
+	$ du -hs --apparent-size
+
 
 Need to copy or sync up directories that are on different hosts/servers? rsync is your friend::
 
