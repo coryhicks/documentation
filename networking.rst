@@ -22,18 +22,18 @@ Ubuntu:
 - use vi or other text editor to edit the .yaml file here: /etc/netplan
 
 - here is a sample static ipv 4 example::
-
-network:
-  version: 2
-  renderer: networkd
-  ethernets:
-    ens33:
-      dhcp4: no
-      addresses:
-        - 172.16.0.100/24
-      gateway4: 172.16.0.1
-      nameservers:
-          addresses: [8.8.8.8, 1.1.1.1]
+::
+		network:
+		  version: 2
+		  renderer: networkd
+		  ethernets:
+		    ens33:
+		      dhcp4: no
+		      addresses:
+		        - 172.16.0.100/24
+		      gateway4: 172.16.0.1
+		      nameservers:
+		          addresses: [8.8.8.8, 1.1.1.1]
 
 
 
