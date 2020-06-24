@@ -21,9 +21,7 @@ Ubuntu:
 
 - use vi or other text editor to edit the .yaml file here: /etc/netplan
 
-- here is a sample static ipv 4 example::
-
-.. TIP::
+.. NOTE:: here is a sample static ipv 4 example
 
 		network:
 		  version: 2
