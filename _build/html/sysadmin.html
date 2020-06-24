@@ -17,6 +17,7 @@
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="$TerminalKungFu" href="terminalkungfu.html" />
     <link rel="prev" title="$nginx" href="nginx.html" /> 
   </head><body>
     <div class="related" role="navigation" aria-label="related navigation">
@@ -25,6 +26,9 @@
         <li class="right" style="margin-right: 10px">
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="terminalkungfu.html" title="$TerminalKungFu"
+             accesskey="N">next</a> |</li>
         <li class="right" >
           <a href="nginx.html" title="$nginx"
              accesskey="P">previous</a> |</li>
@@ -47,6 +51,10 @@
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ du -ah --max-depth=1 /var/log
 </pre></div>
 </div>
+<p>sometimes you need the real/actual size of the dir (important for pools or where file compression is in play)</p>
+<blockquote>
+<div><p>$ du -hs –apparent-size</p>
+</div></blockquote>
 <p>Need to copy or sync up directories that are on different hosts/servers? rsync is your friend:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ rsync -avr -X --exclude=&#39;._NETWARE/&#39; /media/nss/DATA2/ root@172.16.0.213:/media/nss/DATA3/
 </pre></div>
@@ -115,6 +123,9 @@ $ sudo firewall-cmd --reload
   <h4>Previous topic</h4>
   <p class="topless"><a href="nginx.html"
                         title="previous chapter">$nginx</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="terminalkungfu.html"
+                        title="next chapter">$TerminalKungFu</a></p>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -142,6 +153,9 @@ $ sudo firewall-cmd --reload
         <li class="right" style="margin-right: 10px">
           <a href="genindex.html" title="General Index"
              >index</a></li>
+        <li class="right" >
+          <a href="terminalkungfu.html" title="$TerminalKungFu"
+             >next</a> |</li>
         <li class="right" >
           <a href="nginx.html" title="$nginx"
              >previous</a> |</li>
