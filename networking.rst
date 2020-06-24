@@ -13,9 +13,7 @@ Static IP
 
 Ubuntu:
 
-- Ubuntu uses netplan after version 18 and up, it's pretty easy to use
-
-- You will need the name of your network interface::
+- Ubuntu uses netplan after version 18 and up, it's pretty easy to use, you will need the name of your network interface::
 	
 	$ ip a
 
